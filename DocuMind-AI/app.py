@@ -33,7 +33,7 @@ with st.sidebar:
         help="Get a key from https://aistudio.google.com/app/apikey"
     )
     st.session_state["api_key"] = api_key
-    model_name = st.selectbox("Gemini model", ["gemini-3.8-flash", "gemini-2.0-flash"], index=0)
+    model_name = st.selectbox("Gemini model", ["gemini-3.8-flash"], index=0)
     st.caption("Your API key is used for answer generation. It is not saved to the project files.")
     if st.button("Clear chat and documents", use_container_width=True):
         for key in ("messages", "vector_store", "chunks", "document_names"):
